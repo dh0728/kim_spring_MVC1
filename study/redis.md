@@ -29,6 +29,9 @@ Redis는 메모리 기반의 데이터 저장소이다.(In-Momory DB) 키-벨류
   - 디스크가 아닌 메모리에서 데이터를 처리하기 때문에 속도가 빠름
 - Data Type(Collection)을 지원
   - 개발의 편의성, 생산성이 좋아지고 난이도가 낮아짐
+
+<img src="./images/Redis_struct.png">
+
  
 👉 Redis에서 제공하는 **Sorted-Set**자료구조를 사용하면 좀 더 빠르고 간단하게 데이터 정렬가능
 
@@ -36,10 +39,14 @@ Redis는 메모리 기반의 데이터 저장소이다.(In-Momory DB) 키-벨류
 - 인메모리 데이터 저장소가 가지는 휘발성의 특성으로 데이터가 유실될 경우를 방지하여 백업 기븡을 제공
 
 ### AOP (Append On File) 방식
-
-
+- Redis의 모든 write/update 연산 자체를 모두 log 파일에 기록하는 형태
 
 ### RDB (Snapshotting) 방식
+- 순간적으로 메모리에 있는 내용 전체를 디스크에 담아 여구 저장하는 방식
+
+### Redis Sentinel 및 Redis Cluster를 통한 자동 파티셔닝을 제공
+- Master와 Slaves로 구성하여 여러대의 복제본을 만들수 있고, 여러대의 서버로 읽기를 확장 가능
+
 
  
 
